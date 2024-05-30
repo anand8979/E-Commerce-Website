@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ecb3b3;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    header {
+      background: #eeaaaa;
+      color: #288996;
+      padding-top: 30px;
+      min-height: 70px;
+      border-bottom: #bbb 1px solid;
+    }
+
+    header a {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+
+    header ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      overflow: hidden;
+    }
+
+    header #logo {
+      text-align: center;
+      margin-top: 20px;
+      color: #fff;
+      font-size: 2em;
+    }
+
+    header #menu-icon {
+      display: none;
+    }
+
+    header #menu {
+      clear: both;
+      max-height: 0;
+      transition: max-height 0.2s ease-out;
+    }
+
+    header .clearfix {
+      display: none;
+    }
+
+    @media only screen and (max-width: 500px) {
+      header #menu-icon {
+        display: block;
+        cursor: pointer;
+      }
+
+      header ul {
+        max-height: 500px;
+        overflow: hidden;
+      }
+
+      header ul.open {
+        max-height: 1000px;
+      }
+
+      header li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+      }
+
+      header .clearfix {
+        display: block;
+        clear: both;
+      }
+    }
+
+    section {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .contact-form {
+      flex: 1;
+      padding: 20px;
+      background-color: #e6f0b7;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .contact-form button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .contact-info {
+      flex: 1;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info h2 {
+      color: #333;
+    }
+
+    .contact-info p {
+      line-height: 1.6;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul id="MenuItems">
+          <li><a href="pro.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact us.html">Contact</a></li>
+          <li><a href="account.html">Account</a></li>
+          
+      </ul>
+  </nav>
+  
+    <div class="container">
+      
+      <div id="logo"><img src="images/logo.png "></div>
+    </div>
+  </header>
+
+  <div class="container">
+    <section>
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p>19th KM Stone, NH-09, Ghaziabad, Uttar Pradesh 201009</p>
+        <p>Email: redstore2023aad@gmail.com</p>
+        <p>Phone: <br>+91 9720323001 
+             <br> +91 7818896331 
+             <br> +91 9990675806
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById('menu-icon').addEventListener('click', function () {
+      var menu = document.getElementById('menu');
+      if (menu.style.maxHeight == '500px') {
+        menu.style.maxHeight = '0px';
+      } else {
+        menu.style.maxHeight = '500px';
+      }
+    });
+  </script>
+
+</body>
+</html>
